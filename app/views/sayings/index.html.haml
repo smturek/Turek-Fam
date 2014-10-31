@@ -7,7 +7,8 @@
       %img.img-responsive{src:"http://localhost:3000/assets/Old-Man.jpg"}
     .col-md-5
       %h1
-        = @sayings.sample.quote
+        - if @sayings.present?
+          = @sayings.sample.quote
   .row.oldmanbutton
     .col-md-2.col-md-offset-2
       =link_to "Is that all you got, old man?", sayings_path, :class => "btn btn-default"
