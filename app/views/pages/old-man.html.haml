@@ -1,0 +1,24 @@
+.container-fluid
+  - @om_sayings = ["Oh fist!",
+                  "Fisticuffing sack of fisting shelfhead",
+                  "No track records, no accountability",
+                  "Be part of the solution, not the problem!",
+                  "Shorten the distance",
+                  "It's not about age, it's about pressure",
+                  "It smells like colon wrapped in colon left on a sidewalk in the sun",
+                  "Well it's fast Sunday, so boot leather would taste good right now!",
+                  "I will slam dunk you into a cave, you recalcitrant pterodactyl",
+                  "Go stick your head in the oven and see how long 5 minutes is",
+                  "Maximum amounts of Alge Crumpler, Def you!"]
+  .row
+    .col-md-10.col-md-offset-2
+      %h2 Sometimes it's hard to express yourself.  Let the old man help!
+  .row.oldman
+    .col-md-4.col-md-offset-2
+      %img.img-responsive{src:"http://localhost:3000/assets/Old-Man.jpg"}
+    .col-md-5
+      %h1
+        = @om_sayings.sample
+  .row.oldmanbutton
+    .col-md-2.col-md-offset-5
+      =link_to "Is that all you got, old man?", oldman_path

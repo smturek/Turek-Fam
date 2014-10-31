@@ -1,0 +1,10 @@
+.container-fluid
+
+  = form_for @saying, :html => {:class => 'form-horizontal'} do |f|
+
+    .form-group
+      = f.label :quote, :class => "col-md-1 col-md-offset-1 control-label"
+      .col-md-9
+        = f.text_field :quote, :class => "form-control"
+
+    = f.submit 'It speaks?!?!', :class => "btn btn-primary col-md-offset-6"
